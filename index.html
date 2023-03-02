@@ -51,17 +51,19 @@
         </div>
         <i
           class="fa-sharp fa-solid fa-bars cursor-pointer absolute top-5 right-4 text-2xl lg:hidden"
+          onclick="showMenu()"
         ></i>
         <div
-          class="absolute top-0 left-0 rounded-lg hidden bg-Black1 w-[375px] h-screen lg:static lg:h-6 lg:z-0"
+          id="menu"
+          class="absolute top-0 left-0 rounded-lg z-10 hidden bg-Black1 w-[375px] h-screen lg:static lg:h-6 lg:z-0 duration-100 ease-linear"
         >
-          <i class="fa-solid fa-x absolute top-3 right-4 text-xl lg:hidden"></i>
+          <i class="fa-solid fa-x absolute top-3 right-4 text-xl lg:hidden cursor-pointer" onclick="hideMenu()"></i>
           <ul
             class="flex justify-center items-center flex-col h-full gap-8 lg:static lg:flex-row"
           >
             <li>
               <a
-                class="font-Montserrat not-italic font-medium text-lg leading-[22px] hover:font-bold hover:border-b-2 duration-100 ease-linear"
+                class="font-Montserrat not-italic font-medium text-lg leading-[22px] hover:font-bold hover:border-b-2 duration-300 ease-linear"
                 href="#"
                 >Home</a
               >
@@ -157,6 +159,14 @@
         devChallenges.io
       </p>
     </main>
-    <script src="main.js"></script>
+    <script>
+      let menu = document.getElementById("menu");
+      function showMenu() {
+        menu.classList.remove("hidden");
+      }
+      function hideMenu() {
+        menu.classList.add('hidden')
+      }
+    </script>
   </body>
 </html>
