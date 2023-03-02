@@ -55,9 +55,12 @@
         ></i>
         <div
           id="menu"
-          class="absolute top-0 left-0 rounded-lg z-10 hidden bg-Black1 w-[375px] h-screen lg:static lg:h-6 lg:z-0 duration-100 ease-linear"
+          class="absolute top-0 left-0 rounded-lg z-10 hidden bg-Black1 w-[375px] h-screen lg:static lg:h-6 lg:z-0 lg:block"
         >
-          <i class="fa-solid fa-x absolute top-3 right-4 text-xl lg:hidden cursor-pointer" onclick="hideMenu()"></i>
+          <i
+            class="fa-solid fa-x absolute top-3 right-4 text-xl lg:hidden cursor-pointer"
+            onclick="hideMenu()"
+          ></i>
           <ul
             class="flex justify-center items-center flex-col h-full gap-8 lg:static lg:flex-row"
           >
@@ -165,7 +168,7 @@
         menu.classList.remove("hidden");
       }
       function hideMenu() {
-        menu.classList.add('hidden')
+        menu.classList.add("hidden");
       }
     </script>
   </body>
